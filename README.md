@@ -19,3 +19,24 @@ var globcp = new Globcp()
 globcp.copyFlat(srcDir, pattern, destDir, done)
 globcp.copyTree(srcDir, pattern, destDir, done)
 ```
+
+### Development
+
+Main dev commands:
+
+```
+# setup
+npm install
+
+# compile src
+npm run build
+
+# watch src files and re-build on change
+npm run watch
+
+# run tests, outputs result to mocha-test.html
+npm test
+
+# watch compiled files, and re-run tests on change
+npm run testwatch
+```
