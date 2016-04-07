@@ -1,6 +1,6 @@
 {
   "name": "globcp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "simple js command-line util for copying files using glob patterns",
   "main": "index.js",
   "bin": {
