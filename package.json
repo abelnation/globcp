@@ -1,0 +1,44 @@
+{
+  "name": "globcp",
+  "version": "0.0.1",
+  "description": "simple js command-line util for copying files using glob patterns",
+  "main": "index.js",
+  "bin": {
+    "globcp": "./bin/globcp"
+  },
+  "scripts": {
+    "lint": "eslint lib/**/*.js",
+    "test": "mocha --check-leaks ./test/*.js",
+    "testhtml": "script -q test.out npm test | ansi-html > mocha-test.html",
+    "testwatch": "watch-run -p './lib/**/*.js' npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelnation/globcp.git"
+  },
+  "author": {
+    "name": "Abel Allison",
+    "email": "abel.allison@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abelnation/globcp/issues"
+  },
+  "homepage": "https://github.com/abelnation/globcp#readme",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "cli-ck": "^0.2.1",
+    "fs-extra": "^0.26.7",
+    "glob": "^7.0.3"
+  },
+  "devDependencies": {
+    "ansi-html-stream": "0.0.3",
+    "chai": "^3.4.1",
+    "chalk": "^1.1.1",
+    "eslint": "^2.7.0",
+    "livereload": "git://github.com/napcs/node-livereload",
+    "lodash": "^4.8.2",
+    "mocha": "^2.3.4",
+    "watch-run": "git://github.com/abelnation/watch-run"
+  }
+}
