@@ -85,15 +85,15 @@ describe('globcp', function() {
         it('**', function(done) {
             var srcDir = path.resolve(fixturesDir, 'flat_01')
             var destDir = path.resolve(tmpDir, 'dest')
-            globcp.copyTree(srcDir, '**', srcDir, destDir, checkResult(destDir, [
+            globcp.copyTree(srcDir, '**', destDir, checkResult(destDir, [
                 'a.html', 'a.txt', 'b.txt', 'c.txt'
             ], done))
         })
 
-        it('nsted src, **', function(done) {
+        it('nested src, **', function(done) {
             var srcDir = path.resolve(fixturesDir, 'tree_01')
             var destDir = path.resolve(tmpDir, 'dest')
-            globcp.copyTree(srcDir, '**', srcDir, destDir, checkResult(destDir, [
+            globcp.copyTree(srcDir, '**', destDir, checkResult(destDir, [
                 'a/a.txt', 'a/b/b.txt', 'a/b/c/c.txt'
             ], done))
         })
