@@ -5,12 +5,14 @@ var path = require('path')
 var assert = require('chai').assert
 var fsAssert = require('./helpers/fs-assert')
 
-var globcp = require('../lib/globcp')
+var Globcp = require('../lib/globcp')
 
 describe('globcp', function() {
 
     var tmpDir
     var fixturesDir
+
+    var globcp
 
     function checkResult(destDir, expectedFiles, done) {
         return function(err) {
@@ -28,6 +30,8 @@ describe('globcp', function() {
         fs.ensureDirSync(tmpDir)
 
         fixturesDir = path.resolve(__dirname, 'fixtures')
+
+        globcp = new Globcp({ debug: true })
     })
 
     beforeEach(function() {
@@ -39,7 +43,6 @@ describe('globcp', function() {
     })
 
     describe('flat copy to dest dir', function() {
-
         it('**', function(done) {
             var srcDir = path.resolve(fixturesDir, 'flat_01')
             var destDir = path.resolve(tmpDir, 'dest')
